@@ -33,9 +33,9 @@ class Config:
     CURATED_DATABASE = "ss-big-data-partnerapi-curated-production"
     
     # Slack Configuration
-    SLACK_BOT_TOKEN = 'REMOVED_TOKEN294405122499-5505542413671-bu2sVXJ7RoHdzP6sOynC3Ley'
+    SLACK_BOT_TOKEN = 'REMOVED_TOKENx-x-x'
     SLACK_CHANNEL_ID = 'C07GVUDHABB'
-    SLACK_ICON_URL = 'https://cdn.pagefly.io/images/custom/AwsGlueStreamlineSvgLogos11741748200367.png'
+    SLACK_ICON_URL = 'https://cdn.pagefly.io/x/custom/AwsGlueStreamlineSvgLogos11741748200367.png'
     
     # Data Configuration
     DATETIME_COLUMNS = [
