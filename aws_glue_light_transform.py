@@ -1,15 +1,14 @@
 import sys
 import json
+import os
 from awsglue.utils import getResolvedOptions
 from pyspark.context import SparkContext
 from awsglue.context import GlueContext
 from awsglue.job import Job
 import boto3
 import logging
-from datetime import datetime
 import urllib.request
 import time
-import pandas as pd
 import pyspark.sql.functions as F
 
 # Initialize logger
@@ -33,9 +32,9 @@ class Config:
     CURATED_DATABASE = "ss-big-data-partnerapi-curated-production"
     
     # Slack Configuration
-    SLACK_BOT_TOKEN = 'REMOVED_TOKENx-x-x'
-    SLACK_CHANNEL_ID = 'C07GVUDHABB'
-    SLACK_ICON_URL = 'https://cdn.pagefly.io/x/custom/AwsGlueStreamlineSvgLogos11741748200367.png'
+    SLACK_BOT_TOKEN = os.getenv('SLACK_BOT_TOKEN')
+    SLACK_CHANNEL_ID = os.getenv('SLACK_CHANNEL_ID')
+    SLACK_ICON_URL = os.getenv('SLACK_ICON_URL')
     
     # Data Configuration
     DATETIME_COLUMNS = [
